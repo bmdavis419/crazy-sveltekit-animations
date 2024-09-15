@@ -68,7 +68,7 @@
 	<div>
 		<div class="z-10 flex items-center justify-center flex-col gap-6">
 			<GradualSpacing
-				class="font-geist text-center text-4xl font-bold tracking-[-0.1em]  text-black dark:text-white md:text-7xl md:leading-[5rem]"
+				class="font-geist text-center text-2xl font-bold tracking-[-0.1em]  text-black dark:text-white md:text-7xl md:leading-[5rem] text-wrap"
 				words="How Wild Can I Make This?"
 			/>
 			<a href="https://animation-svelte.vercel.app/" target="_blank">
