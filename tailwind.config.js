@@ -18,6 +18,26 @@ export default {
 				bold: '700',
 				extrabold: '800',
 				black: '900'
+			},
+			animation: {
+				gradient: 'gradient 8s linear infinite',
+				marquee: 'marquee var(--duration) linear infinite',
+				'marquee-vertical': 'marquee-vertical var(--duration) linear infinite'
+			},
+			keyframes: {
+				gradient: {
+					to: {
+						'background-position': '200% center'
+					}
+				},
+				marquee: {
+					from: { transform: 'translateX(0)' },
+					to: { transform: 'translateX(calc(-100% - var(--gap)))' }
+				},
+				'marquee-vertical': {
+					from: { transform: 'translateY(0)' },
+					to: { transform: 'translateY(calc(-100% - var(--gap)))' }
+				}
 			}
 		}
 	},
