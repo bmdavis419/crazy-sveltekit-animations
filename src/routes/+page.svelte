@@ -17,7 +17,7 @@
 		height={600}
 	/>
 
-	<h2 class="text-center text-5xl font-bold z-10">This is Fucking Sick</h2>
+	<h2 class="text-center text-8xl font-bold z-10 font-geist">This is Fucking Sick</h2>
 </div>
 
 <BiDirectionalBeam />
