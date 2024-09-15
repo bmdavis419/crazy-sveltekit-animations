@@ -31,6 +31,17 @@ export default {
 					'0%': { transform: 'translateY(-50%)' },
 					'100%': { transform: 'translateY(0)' }
 				},
+				'shine-pulse': {
+					'0%': {
+						'background-position': '0% 0%'
+					},
+					'50%': {
+						'background-position': '100% 100%'
+					},
+					to: {
+						'background-position': '0% 0%'
+					}
+				},
 				orbit: {
 					'0%': {
 						transform: 'rotate(0deg) translateY(calc(var(--radius) * 1px)) rotate(0deg)'

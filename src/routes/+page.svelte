@@ -11,6 +11,9 @@
 	import Globe from '$lib/components/Globe.svelte';
 	import LetterPullUp from '$lib/components/LetterPullUp.svelte';
 	import RetroGrid from '$lib/components/RetroGrid.svelte';
+	import GridPattern from '$lib/components/GridPattern.svelte';
+	import ShineBorder from '$lib/components/ShineBorder.svelte';
+	import MagicCard from '$lib/components/MagicCard.svelte';
 
 	const reviews = [
 		{
@@ -137,7 +140,7 @@
 	></div>
 </div>
 
-<LetterPullUp words="Easy ways to make stuff look good" class="text-wrap text-md md:text-xl" />
+<LetterPullUp words="Easy ways to make stuff look good" class="text-wrap text-md md:text-3xl" />
 
 <div class=" w-full flex md:flex-row flex-col items-center justify-center gap-4">
 	<CirclesCard />
@@ -172,3 +175,76 @@
 
 	<RetroGrid />
 </div>
+
+<div
+	class="relative flex h-fit w-full items-center justify-center overflow-hidden rounded-lg bg-background p-20 md:shadow-xl"
+>
+	<div class="flex justify-center items-center w-full min-h-52">
+		<!-- Add Border colors in array of strings  -->
+		<ShineBorder
+			class="bg-neutral-950 text-center text-2xl font-bold capitalize"
+			color={['#FF057A', '#0883FF']}
+		>
+			Svelte is Fun
+		</ShineBorder>
+	</div>
+	<GridPattern
+		width={30}
+		height={30}
+		strokeDashArray="4 2"
+		class={cn('[mask-image:radial-gradient(700px_circle_at_center,white,transparent)]')}
+	/>
+</div>
+
+<div class="flex w-full flex-col gap-4 h-[250px] lg:flex-row">
+	<MagicCard
+		class="cursor-pointer flex-col items-center justify-center shadow-2xl whitespace-nowrap text-4xl group hover:border-[#2effbd9e] transition-all duration-300"
+		gradientColor="#043634"
+		gradientSize={300}
+	>
+		<div
+			class="group-hover:text-[#2EFFBD] transition-all duration-500 flex gap-1.5 justify-center items-center font-semibold"
+		>
+			<!-- <img src={SupabaseSvg} alt="svelte_logo" class="size-10 mt-1.5" /> -->
+			Supabase
+		</div>
+	</MagicCard>
+	<MagicCard
+		class="cursor-pointer flex-col items-center justify-center shadow-2xl whitespace-nowrap text-4xl group hover:border-[#ff770094] transition-all duration-300"
+		gradientColor="#4D2506"
+	>
+		<div
+			class="group-hover:text-[#FF7700] transition-all duration-500 flex gap-1.5 justify-center items-center font-semibold"
+		>
+			<!-- <img src={SvelteSvg} alt="svelte_logo" class="size-10 mt-1.5" /> -->
+			Svelte
+		</div>
+	</MagicCard>
+	<MagicCard
+		class="cursor-pointer flex-col items-center justify-center shadow-2xl whitespace-nowrap text-4xl group hover:border-[#07e351] transition-all duration-300"
+		gradientColor="#07e351"
+	>
+		<div
+			class="group-hover:text-[#07e351] transition-all duration-500 flex gap-1.5 justify-center items-center font-semibold"
+		>
+			<!-- <img src={SvelteSvg} alt="svelte_logo" class="size-10 mt-1.5" /> -->
+			Insiderviz
+		</div>
+	</MagicCard>
+</div>
+
+<footer class="flex items-center justify-center py-8">
+	<h2>
+		Built by <a
+			href="https://twitter.com/bmdavis419"
+			target="_blank"
+			class="font-bold hover:underline">Ben Davis</a
+		>
+		-
+		<a
+			href="https://github.com/bmdavis419/crazy-sveltekit-animations"
+			target="_blank"
+			class="font-bold hover:underline">GitHub</a
+		>
+	</h2>
+</footer>
