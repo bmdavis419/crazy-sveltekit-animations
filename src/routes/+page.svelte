@@ -7,6 +7,10 @@
 	import ReviewCard from '$lib/components/ReviewCard.svelte';
 	import BlurFade from '$lib/components/BlurFade.svelte';
 	import GradualSpacing from '$lib/components/GradualSpacing.svelte';
+	import CirclesCard from '$lib/components/CirclesCard.svelte';
+	import Globe from '$lib/components/Globe.svelte';
+	import LetterPullUp from '$lib/components/LetterPullUp.svelte';
+	import RetroGrid from '$lib/components/RetroGrid.svelte';
 
 	const reviews = [
 		{
@@ -131,4 +135,40 @@
 	<div
 		class="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-white dark:from-neutral-950"
 	></div>
+</div>
+
+<LetterPullUp words="Easy ways to make stuff look good" class="text-wrap text-md md:text-xl" />
+
+<div class=" w-full flex md:flex-row flex-col items-center justify-center gap-4">
+	<CirclesCard />
+
+	<BiDirectionalBeam />
+
+	<div class="flex justify-center items-center">
+		<div
+			class="relative flex h-fit w-full md:max-w-[32rem] max-w-[22rem] items-center justify-center overflow-hidden rounded-lg bg-background px-40 pb-40 pt-8 md:pb-60 md:shadow-xl"
+		>
+			<span
+				class="pointer-events-none select-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-center text-8xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10"
+			>
+				Earth
+			</span>
+			<Globe class="top-28" />
+			<div
+				class="pointer-events-none absolute inset-0 h-full bg-[radial-gradient(circle_at_50%_200%,rgba(0,0,0,0.2),rgba(255,255,255,0))]"
+			></div>
+		</div>
+	</div>
+</div>
+
+<div
+	class="relative flex size-full items-center justify-center overflow-hidden rounded-lg bg-background p-20 md:shadow-xl"
+>
+	<span
+		class="pointer-events-none z-10 whitespace-pre-wrap bg-gradient-to-b from-[#d2e6d8] via-[#ab013c] to-[#1e4fff] bg-clip-text text-center text-7xl font-bold leading-none tracking-tighter text-transparent"
+	>
+		This is Sick
+	</span>
+
+	<RetroGrid />
 </div>
