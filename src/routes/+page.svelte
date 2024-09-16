@@ -14,6 +14,7 @@
 	import GridPattern from '$lib/components/GridPattern.svelte';
 	import ShineBorder from '$lib/components/ShineBorder.svelte';
 	import MagicCard from '$lib/components/MagicCard.svelte';
+	import Meteors from '$lib/components/Meteors.svelte';
 
 	const reviews = [
 		{
@@ -106,6 +107,17 @@
 			</a>
 		</div>
 	</div>
+</div>
+
+<div
+	class="relative flex h-fit w-full items-center justify-center overflow-hidden rounded-lg border bg-background p-20 md:shadow-xl"
+>
+	<Meteors number={30} />
+	<p
+		class="z-10 whitespace-pre-wrap text-center text-5xl tracking-tight font-semibold bg-gradient-to-br from-white to-blue-900/40 text-transparent bg-clip-text"
+	>
+		Meteors
+	</p>
 </div>
 
 <section id="header" class="font-geist pt-8 pl-8">
